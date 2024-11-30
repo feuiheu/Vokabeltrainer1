@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vokabeltrainer</title>
+</head>
+<body>
+  <header>
+    <h1>Vokabeltrainer</h1>
+    <nav>
+      <button id="show-list">Vokabelliste</button>
+      <button id="show-quiz">Vokabelabfrage</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Vokabelliste -->
+    <section id="vocab-list-page" class="page">
+      <h2>Vokabelliste</h2>
+      <section id="add-vocab">
+        <form id="vocab-form">
+          <input type="text" id="word" placeholder="Wort" required>
+          <input type="text" id="translation" placeholder="Übersetzung" required>
+          <button type="submit">Hinzufügen</button>
+        </form>
+      </section>
+      <ul id="list"></ul>
+    </section>
+
+    <!-- Vokabelabfrage -->
+    <section id="quiz-page" class="page hidden">
+      <h2>Vokabelabfrage</h2>
+      <div id="quiz-container">
+        <p id="question">Drücke "Start", um die Abfrage zu beginnen!</p>
+        <input type="text" id="answer" placeholder="Übersetzung eingeben" disabled>
+        <button id="start-quiz">Start</button>
+        <button id="check-answer" disabled>Überprüfen</button>
+      </div>
+      <p id="feedback"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
